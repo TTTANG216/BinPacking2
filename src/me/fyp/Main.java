@@ -9,6 +9,13 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
+/*
+*   This project is in the 2nd phrase, implemented online algorithm and enhanced the offline algorithm
+*   Author: TANG Tsz Tsun
+*   SID: 1155125182
+*
+ */
+
 public class Main {
     public static int IMAGE_WIDTH  = 1400;
     public static int IMAGE_HEIGHT = 700;
@@ -29,6 +36,7 @@ public class Main {
     // k1 = index of bins, k2 = index of items.
 
     public Main() {
+        // Initialize all the objects
         BufferedImage img = new BufferedImage(IMAGE_WIDTH, IMAGE_HEIGHT, BufferedImage.TYPE_INT_ARGB);
         icon = new ImageIcon(img);
         pen = img.createGraphics();
@@ -50,12 +58,13 @@ public class Main {
         bins.add(new Bin(pen,BIN_HEIGHT, BIN_WIDTH));
         // Title string
         String title   = "Painter";
-        // Message to show how many item is added and how many bin is used
+        // Button to choose offline or online mode
         Object[] options = {"", "", "", "Offline", "Online"};
 
         for ( ; ; )
         {
             int response;
+            // Message to show how many item is added and how many bin is used
             String message = (isOnline? "Online Mode": "Offline Mode") + "\nNumber of Item: " + (ITEM_SIZE - items.size()) + "\nNumber of Bin: " + (k1 + 1);
             // Same as array, 0 is the first button pressed
             response = JOptionPane.showOptionDialog(null, message, title, JOptionPane.DEFAULT_OPTION,
@@ -70,16 +79,21 @@ public class Main {
                     continue;
             }
 
+            // Start the offline mode and use offline algorithm
             if (response == 3) {
                 isOnline = false;
                 isInitialized = true;
                 createItems(ITEM_SIZE);
+                // Update the buttons
                 options = new Object[]{"Next Item", "Print", "Dataset"};
                 continue;
-            } else if (response == 4) {
+            }
+            // Start the online mode and use online algorithm
+            else if (response == 4) {
                 isOnline = true;
                 isInitialized = true;
                 createItems(ITEM_SIZE);
+                // Update the buttons
                 options = new Object[]{"Next Item", "Print", "Dataset"};
                 continue;
             }
@@ -123,6 +137,7 @@ public class Main {
     }
 
     public void createItems(int size) {
+        // Get the dataset from txt file
         if (TXT) {
             try {
                 getData();
@@ -130,7 +145,7 @@ public class Main {
                 e.printStackTrace();
             }
             items = mItems;
-        } else {
+        } else { // Create the dataset in random
             // Create n items and add them into an arraylist
             for (int i=0; i<size; i++) {
                 items.add(new Item(pen, rngObj.nextInt(BIN_HEIGHT) + 1, rngObj.nextInt(BIN_WIDTH) + 1));
@@ -158,6 +173,7 @@ public class Main {
         println(dataSetMsg);
     }
 
+    // Function to get the dataset from txt file
     public void getData() throws Exception {
         Scanner scanner = new Scanner(new File("data.txt"));
         while(scanner.hasNextLine()) {
@@ -358,5 +374,6 @@ public class Main {
 
     }
 
+    // A function just to get rid of the "System.out."
     public void println(String str) {System.out.println(str);}
 }
