@@ -2,15 +2,13 @@
 I am a student from The Chinese University of Hong Kong (CUHK) major in System Engineering & Engineering Management and this is my final year project.
 This is a Bin Packing Solver with our original algorithm developed in Java.
 <br /><br />Our aim is to design and analyze an original alogrithm for both online and offline bin packing problem in 2D as well as comparing with other algorithms such as the following:
-- Bottom-Left
-- Best Short Side Fit
-- Best Long Side Fit
-- Best Area Fit
-- Greedy Best long Side Fit
-- Shelf First Fit
-- Shelf Best Width Fit
-- Shelf Worst Width Fit
-- Shelf Best Area Fit
+|Offline|Online|
+|:---:|:---:|
+|Bottom-Left | Shelf First Fit|
+|Best Short Side Fit | Shelf Best Width Fit|
+|Best Long Side Fit | Shelf Worst Width Fit|
+|Best Area Fit | Shelf Best Area Fit|
+|Greedy Best long Side Fit | |
 
 ## Preview
 **Offline Mode**
