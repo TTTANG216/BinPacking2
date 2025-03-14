@@ -94,3 +94,5 @@ The time complexity of our online algorithm is $O(n^2)$
 
 Sorting a collection in java and removing an element from an arraylist takes $O(nlogn)$ and $O(n)$ time respectively.
 <br /> The space complexity of our offline and online algorithm is $O(n)$ as we store all items in an arraylist.
+
+<br /> More information can be view [here.](https://drive.google.com/file/d/1C-Oq-xnRjaQW9Mrh8F2u9gbJNtbDhxpq/view)
