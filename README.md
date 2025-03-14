@@ -12,6 +12,13 @@ This is a Bin Packing Solver with our original algorithm developed in Java.
 - Shelf Worst Width Fit
 - Shelf Best Area Fit
 
+## Preview
+**Offline Mode**
+<br />![https://github.com/src/me/fyp/offline bin packing.gif](https://github.com/TTTANG216/BinPacking2/blob/master/src/me/fyp/offline%20bin%20packing.gif)
+<br />
+**Online Mode**
+<br />![https://github.com/src/me/fyp/online bin packing.gif](https://github.com/TTTANG216/BinPacking2/blob/master/src/me/fyp/online%20bin%20packing.gif)
+
 ## Problem
 **Two Dimensional Offline Bin Packing Problem:**\
 The two dimensional offline bin packing problem is defined as the following:
