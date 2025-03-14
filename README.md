@@ -8,7 +8,7 @@ This is a Bin Packing Solver with our original algorithm developed in Java.
 |Best Short Side Fit | Shelf Best Width Fit|
 |Best Long Side Fit | Shelf Worst Width Fit|
 |Best Area Fit | Shelf Best Area Fit|
-|Greedy Best long Side Fit | |
+|Greedy Best Long Side Fit | |
 
 ## Preview
 **Offline Mode**
